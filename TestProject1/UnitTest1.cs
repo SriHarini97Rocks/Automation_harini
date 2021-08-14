@@ -95,7 +95,7 @@ namespace TestProject1
 
         public void Test()
         {
-            int b = 8;
+              int b = 8; int a=1;
         }
 
         [Test]
