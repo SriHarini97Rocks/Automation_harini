@@ -62,7 +62,7 @@ namespace TestProject1
             else
             {
                 for (int i = 0; i <Math.Abs( diff); i++)
-                    driver.FindElement(By.XPath("/html/body/form/div[2]/table/tbody/tr[1]/td/table/tbody/tr/td[3]/a")).Click();
+                    driver.FindElement(By.XPath("/html/body/form/div[2]/table/tbody/tr[1]/td/table/tbody/tr/td[3]/a")).Click(); ;
             }
 
             List<IWebElement> dateElements =new List<IWebElement>( driver.FindElements(By.XPath("/html/body/form/div[2]/table/tbody/tr/td")));
@@ -89,7 +89,20 @@ namespace TestProject1
         {
 
         }
-        
+
+        [Test]
+
+        public void Test()
+        {
+             
+        }
+
+        [Test]
+
+        public void Test1()
+        {
+
+        }
 
     }
 }
