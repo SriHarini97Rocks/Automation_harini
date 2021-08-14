@@ -49,6 +49,7 @@ namespace TestProject1
             var currentDate = driver.FindElement(By.XPath("/html/body/form/div[2]/table/tbody/tr[1]/td/table/tbody/tr/td[2]")).Text;//september 2022
 
             var current = "01 " + currentDate;
+            int gf = 98;
             int jh = 9;
             var currentDateTime = DateTime.Parse(current);
             var targetDateTime = DateTime.Parse(expectedDate);
