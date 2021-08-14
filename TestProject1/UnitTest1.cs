@@ -94,9 +94,15 @@ namespace TestProject1
 
         public void Test()
         {
+             
+        }
+
+        [Test]
+
+        public void Test1()
+        {
 
         }
-        
 
     }
 }
