@@ -56,7 +56,7 @@ namespace TestProject1
             if(diff>0)
             {
                 ///html/body/form/div[2]/table/tbody/tr[1]/td/table/tbody/tr/td[1]/a
-                for (int i = 0; i <Math.Abs( diff); i++)
+                for (int i = 0; i <Math.Abs(diff); i++)
                     driver.FindElement(By.XPath("/html/body/form/div[2]/table/tbody/tr[1]/td/table/tbody/tr/td[1]/a")).Click();
             }
             else
