@@ -36,7 +36,7 @@ namespace TestProject1
         public void Test2()
         {
             driver.Navigate().GoToUrl("https://www.guru99.com/selenium-csharp-tutorial.html");
-            var path = driver.FindElement(By.Id("//*[@id='g - mainbar']/div[1]/div/div/div/div/div/div[2]/h2[2]")).Text;
+            var path = driver.FindElement(By.XPath("/html/body/div[2]/section[3]/div/div[1]/main/div[1]/div/div/div/div/div/div[2]/h2[2]")).Text;
             Assert.AreEqual(path, "C# Overview:"); driver.Close();
         }
 
