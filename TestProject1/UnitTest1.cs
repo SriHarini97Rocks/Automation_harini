@@ -41,7 +41,7 @@ namespace TestProject1
             driver.Navigate().GoToUrl("http://localhost:82/sample.aspx");
              driver.FindElement(By.XPath("/html/body/form/input[9]")).Click();
             string s = driver.FindElement(By.XPath("/html/body/form/span[7]")).Text;
-            Assert.AreEqual(s, "Please agree to terms and conditions"); driver.Close();
+            Assert.AreEqual(s, "Please agree to terms and conditions1"); driver.Close();
         }
 
     }
