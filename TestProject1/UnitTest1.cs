@@ -30,9 +30,15 @@ namespace TestProject1
         {
             driver.Navigate().GoToUrl("https://www.guru99.com/selenium-csharp-tutorial.html");
             string s = driver.Title;
-            Assert.AreEqual(false, s.Contains("Selenium"));driver.Close();
+            Assert.AreEqual(true, s.Contains("Selenium"));driver.Close();
         }
-       
+        [Test]
+        public void Test2()
+        {
+            driver.Navigate().GoToUrl("https://www.guru99.com/selenium-csharp-tutorial.html");
+            var path = driver.FindElement(By.Id("//*[@id='g - mainbar']/div[1]/div/div/div/div/div/div[2]/h2[2]")).Text;
+            Assert.AreEqual(path, "C# Overview:"); driver.Close();
+        }
 
     }
 }
