@@ -30,7 +30,7 @@ namespace TestProject1
         {
             driver.Navigate().GoToUrl("https://www.guru99.com/selenium-csharp-tutorial.html");
             string s = driver.Title;
-            Assert.AreEqual(true, s.Contains("Selenium"));driver.Close();
+            Assert.AreEqual(false, s.Contains("Selenium"));driver.Close();
         }
        
 
