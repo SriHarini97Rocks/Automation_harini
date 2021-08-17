@@ -21,7 +21,10 @@ namespace TestProject1
         [SetUp]
         public void Setup()
         {
-            driver = new ChromeDriver();
+            var options = new ChromeOptions();
+            options.AddArgument("no-sandbox");
+             driver = new ChromeDriver(ChromeDriverService.CreateDefaultService(), options, TimeSpan.FromMinutes(3));
+            driver.Manage().Timeouts().PageLoad.Add(System.TimeSpan.FromSeconds(30));
 
         }
 
