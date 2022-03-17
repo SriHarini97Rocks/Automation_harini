@@ -21,7 +21,7 @@ namespace SpecFlowTestSuite.StepDefinitions
         {
             driver = _context.Get<SeleniumDriver>("driver").SetUp();
             driver.Url = "https://www.phptravels.net/login";
-            driver.Manage().Window.Maximize();
+           // driver.Manage().Window.Maximize();
             driver.FindElement(By.XPath("//*[@id=\"fadein\"]/div[1]/div/div[2]/div[2]/div/form/div[1]/div/input")).SendKeys("user@phptravels.com");
             driver.FindElement(By.XPath("//*[@id=\"fadein\"]/div[1]/div/div[2]/div[2]/div/form/div[2]/div[1]/input")).SendKeys("demouser");
             driver.FindElement(By.XPath("//*[@id=\"fadein\"]/div[1]/div/div[2]/div[2]/div/form/div[3]/button")).Click();
