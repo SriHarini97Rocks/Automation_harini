@@ -33,7 +33,7 @@ namespace TestProject1
             driver.Url="https://localhost:7054";
             driver.Manage().Window.Maximize();
             var s=driver.FindElement(By.XPath("//*[@id=\"navbarSupportedContent\"]/ul/li[2]/a")).Text;
-Assert.AreEqual(s,"Contact us");
+Assert.AreEqual(s,"Contact us1");
         }
 
         
