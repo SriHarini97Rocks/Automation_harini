@@ -7,3 +7,6 @@ Scenario: Login into PhpTravels
 	And Enter the password as demouser
 	When the login button is clicked after entering username and password
 	Then the page should be redirected to dashboard page
+
+
+

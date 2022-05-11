@@ -2,6 +2,7 @@ using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -27,22 +28,14 @@ namespace TestProject1
             driver.Manage().Timeouts().PageLoad.Add(System.TimeSpan.FromSeconds(30));
 
         }
-
         [Test]
-        public void Test1()
-        {
-            driver.Navigate().GoToUrl("http://localhost:82/sample.aspx");
-            string s = driver.Title;
-            Assert.AreEqual(true, string.IsNullOrEmpty(s));driver.Close();
-        }
-        [Test]
-        public void Test2()
-        {
-            driver.Navigate().GoToUrl("http://localhost:82/sample.aspx");
-             driver.FindElement(By.XPath("/html/body/form/input[9]")).Click();
-            string s = driver.FindElement(By.XPath("/html/body/form/span[7]")).Text;
-            Assert.AreEqual(s, "Please agree to terms and conditions1"); driver.Close();
+        public void CheckTitle(){
+            driver.Url="https://localhost:7054";
+            driver.Manage().Window.Maximize();
+            var s=driver.FindElement(By.XPath("//*[@id=\"navbarSupportedContent\"]/ul/li[2]/a")).Text;
+Assert.AreEqual(s,"Contact us");
         }
 
+        
     }
 }
